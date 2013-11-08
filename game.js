@@ -240,4 +240,10 @@ PS.Tick = function (options)
 	"use strict";
 
 	// Put code here to handle clock ticks
+
+  for (var i=0; i < SEEDS.length; i++){
+    var seed = SEEDS[i];
+    seed.age();
+    seed.draw();
+  }
 };
