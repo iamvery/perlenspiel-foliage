@@ -24,6 +24,7 @@ along with Perlenspiel. If not, see <http://www.gnu.org/licenses/>.
 /*jslint nomen: true, white: true */
 /*global PS */
 
+var GRID = { width: 10, height: 10 }
 var CLOCK_SPEED = 60; // miliseconds
 var SEED_AGE_PROBABILITY = 0.1
 
@@ -118,7 +119,7 @@ PS.Init = function (options)
 
 	// change to the grid dimensions you want
 
-	PS.GridSize ( 8, 8 );
+	PS.GridSize (GRID.width, GRID.height);
 	
     // Put any other init code here
 
