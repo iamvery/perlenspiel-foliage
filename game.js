@@ -44,6 +44,27 @@ var PLANT       = SEED_TYPES[2];
 var DYING_PLANT = SEED_TYPES[3];
 var DEAD        = SEED_TYPES[4];
 
+var SEED_DRAWERS = {};
+
+SEED_DRAWERS[SEED] = function(x, y){
+  PS.BeadGlyph(x, y, '.');
+  PS.BeadGlyphColor(x, y, PS.COLOR_BLACK);
+};
+
+SEED_DRAWERS[SEEDLING] = function(x, y){
+  PS.BeadGlyph(x, y, 0);
+  PS.BeadColor(x, y, PS.COLOR_YELLOW);
+};
+
+SEED_DRAWERS[PLANT] = function(x, y){
+};
+
+SEED_DRAWERS[DYING_PLANT] = function(x, y){
+};
+
+SEED_DRAWERS[DEAD] = function(x, y){
+};
+
 // This is a template for creating new Perlenspiel games
 // All of the functions below MUST exist, or the engine will stop and complain!
 
