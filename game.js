@@ -26,6 +26,16 @@ along with Perlenspiel. If not, see <http://www.gnu.org/licenses/>.
 
 var CLOCK_SPEED = 60; // miliseconds
 
+var Chance = function(probability, random){
+  random = random || Math.random
+
+  return {
+    fate: function(){
+      return random() <= probability
+    },
+  }
+}
+
 // This is a template for creating new Perlenspiel games
 // All of the functions below MUST exist, or the engine will stop and complain!
 
