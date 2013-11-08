@@ -24,6 +24,8 @@ along with Perlenspiel. If not, see <http://www.gnu.org/licenses/>.
 /*jslint nomen: true, white: true */
 /*global PS */
 
+var CLOCK_SPEED = 60; // miliseconds
+
 // This is a template for creating new Perlenspiel games
 // All of the functions below MUST exist, or the engine will stop and complain!
 
@@ -42,6 +44,8 @@ PS.Init = function (options)
 	PS.GridSize ( 8, 8 );
 	
     // Put any other init code here
+
+  PS.Clock(CLOCK_SPEED);
 };
 
 // PS.Click (x, y, data)
