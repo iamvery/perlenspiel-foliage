@@ -36,6 +36,14 @@ var Chance = function(probability, random){
   }
 }
 
+var SEED_TYPES = ['seed', 'seedling', 'plant', 'dying_plant', 'dead']
+
+var SEED        = SEED_TYPES[0];
+var SEEDLING    = SEED_TYPES[1];
+var PLANT       = SEED_TYPES[2];
+var DYING_PLANT = SEED_TYPES[3];
+var DEAD        = SEED_TYPES[4];
+
 // This is a template for creating new Perlenspiel games
 // All of the functions below MUST exist, or the engine will stop and complain!
 
