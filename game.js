@@ -37,13 +37,13 @@ var Chance = function(probability, random){
   }
 }
 
-var SEED_TYPES = ['seed', 'seedling', 'plant', 'dying_plant', 'dead']
+var PLANT_STAGES = ['seed', 'seedling', 'grown', 'dying', 'dead']
 
-var SEED        = SEED_TYPES[0];
-var SEEDLING    = SEED_TYPES[1];
-var PLANT       = SEED_TYPES[2];
-var DYING_PLANT = SEED_TYPES[3];
-var DEAD        = SEED_TYPES[4];
+var SEED        = PLANT_STAGES[0];
+var SEEDLING    = PLANT_STAGES[1];
+var PLANT       = PLANT_STAGES[2];
+var DYING_PLANT = PLANT_STAGES[3];
+var DEAD        = PLANT_STAGES[4];
 
 var SEED_DRAWERS = {};
 
@@ -81,8 +81,8 @@ var Seed = function(x, y, type, fate){
 
   function age(){
     if (!is(DEAD) && fate()){
-      var current_index = SEED_TYPES.indexOf(type);
-      type = SEED_TYPES[++current_index];
+      var current_index = PLANT_STAGES.indexOf(type);
+      type = PLANT_STAGES[++current_index];
     }
   }
 
