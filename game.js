@@ -104,6 +104,12 @@ var Seed = function(x, y, type, fate){
 
 var SEEDS = [];
 
+var plant_seed = function(x, y){
+  var seed = new Seed(x, y, SEED);
+  seed.draw();
+  SEEDS.push(seed);
+}
+
 // This is a template for creating new Perlenspiel games
 // All of the functions below MUST exist, or the engine will stop and complain!
 
@@ -140,9 +146,7 @@ PS.Click = function (x, y, data, options)
 		
 	// put code here for bead clicks
 
-  var seed = new Seed(x, y, SEED);
-  seed.draw();
-  SEEDS.push(seed);
+  plant_seed(x, y);
 };
 
 // PS.Release (x, y, data)
