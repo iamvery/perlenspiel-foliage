@@ -25,6 +25,7 @@ along with Perlenspiel. If not, see <http://www.gnu.org/licenses/>.
 /*global PS */
 
 var CLOCK_SPEED = 60; // miliseconds
+var SEED_AGE_PROBABILITY = 0.1
 
 var Chance = function(probability, random){
   random = random || Math.random
@@ -66,7 +67,7 @@ SEED_DRAWERS[DEAD] = function(x, y){
 };
 
 var Seed = function(x, y, type, fate){
-  fate = fate || new Chance(0.1).fate
+  fate = fate || new Chance(SEED_AGE_PROBABILITY).fate
 
   function is(is_type){
     return(type == is_type)
