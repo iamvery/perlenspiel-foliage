@@ -40,11 +40,11 @@ var Chance = function(probability, random){
 
 var PLANT_STAGES = ['seed', 'seedling', 'grown', 'dying', 'dead']
 
-var SEED        = PLANT_STAGES[0];
-var SEEDLING    = PLANT_STAGES[1];
-var PLANT       = PLANT_STAGES[2];
-var DYING_PLANT = PLANT_STAGES[3];
-var DEAD        = PLANT_STAGES[4];
+var SEED     = PLANT_STAGES[0];
+var SEEDLING = PLANT_STAGES[1];
+var GROWN    = PLANT_STAGES[2];
+var DYING    = PLANT_STAGES[3];
+var DEAD     = PLANT_STAGES[4];
 
 var SEED_DRAWERS = {};
 
@@ -58,12 +58,12 @@ SEED_DRAWERS[SEEDLING] = function(x, y){
   PS.BeadColor(x, y, PS.COLOR_YELLOW);
 };
 
-SEED_DRAWERS[PLANT] = function(x, y){
+SEED_DRAWERS[GROWN] = function(x, y){
   PS.BeadGlyph(x, y, 0);
   PS.BeadColor(x, y, PS.COLOR_GREEN);
 };
 
-SEED_DRAWERS[DYING_PLANT] = function(x, y){
+SEED_DRAWERS[DYING] = function(x, y){
   PS.BeadGlyph(x, y, 0);
   PS.BeadColor(x, y, PS.COLOR_BROWN);
 };
