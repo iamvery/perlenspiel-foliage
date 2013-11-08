@@ -65,6 +65,35 @@ SEED_DRAWERS[DYING_PLANT] = function(x, y){
 SEED_DRAWERS[DEAD] = function(x, y){
 };
 
+var Seed = function(x, y, type, fate){
+  fate = fate || new Chance(0.1).fate
+
+  function is(is_type){
+    return(type == is_type)
+  }
+
+  function age(){
+    if (!is(DEAD) && fate()){
+      var current_index = SEED_TYPES.indexOf(type);
+      type = SEED_TYPES[++current_index];
+    }
+  }
+
+  function draw(){
+    var drawer = SEED_DRAWERS[type];
+    if (drawer) drawer(x,y);
+  }
+
+  return {
+    x: x,
+    y: y,
+
+    is: is,
+    age: age,
+    draw: draw,
+  };
+}
+
 var SEEDS = [];
 
 // This is a template for creating new Perlenspiel games
