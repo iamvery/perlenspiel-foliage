@@ -65,6 +65,8 @@ SEED_DRAWERS[DYING_PLANT] = function(x, y){
 SEED_DRAWERS[DEAD] = function(x, y){
 };
 
+var SEEDS = [];
+
 // This is a template for creating new Perlenspiel games
 // All of the functions below MUST exist, or the engine will stop and complain!
 
