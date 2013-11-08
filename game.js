@@ -131,6 +131,10 @@ PS.Click = function (x, y, data, options)
 	"use strict";
 		
 	// put code here for bead clicks
+
+  var seed = new Seed(x, y, SEED);
+  seed.draw();
+  SEEDS.push(seed);
 };
 
 // PS.Release (x, y, data)
