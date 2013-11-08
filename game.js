@@ -58,12 +58,18 @@ SEED_DRAWERS[SEEDLING] = function(x, y){
 };
 
 SEED_DRAWERS[PLANT] = function(x, y){
+  PS.BeadGlyph(x, y, 0);
+  PS.BeadColor(x, y, PS.COLOR_GREEN);
 };
 
 SEED_DRAWERS[DYING_PLANT] = function(x, y){
+  PS.BeadGlyph(x, y, 0);
+  PS.BeadColor(x, y, PS.COLOR_BROWN);
 };
 
 SEED_DRAWERS[DEAD] = function(x, y){
+  PS.BeadGlyph(x, y, 0);
+  PS.BeadColor(x, y, PS.COLOR_BLACK);
 };
 
 var Seed = function(x, y, type, fate){
